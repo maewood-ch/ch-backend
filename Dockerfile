@@ -13,7 +13,7 @@ FROM eclipse-temurin:21-jre-alpine
 LABEL author="Mae Wood"
 #only a declaration
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","docsapp/docsapp.jar"]
+ENTRYPOINT ["java","-jar","/docsapp/docsapp.jar"]
 WORKDIR /docsapp
 VOLUME /docsapp/h2
 COPY --from=build /docsapp/target/docsapp-0.0.1-SNAPSHOT.jar /docsapp/docsapp.jar
