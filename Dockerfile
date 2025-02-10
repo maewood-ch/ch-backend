@@ -16,4 +16,4 @@ EXPOSE 8080
 ENTRYPOINT ["java","-jar","docsapp/docsapp.jar"]
 WORKDIR /docsapp
 VOLUME /docsapp/h2
-COPY --from=build /docsapp/target/docsapp-0.0.1-SNAPSHOT.jar /docsapp/docsapp
+COPY --from=build /docsapp/target/docsapp-0.0.1-SNAPSHOT.jar /docsapp/docsapp.jar
